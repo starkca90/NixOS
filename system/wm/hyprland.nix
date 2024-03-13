@@ -5,6 +5,7 @@
   imports = [ ./wayland.nix
               ./pipewire.nix
               ./dbus.nix
+              ./xdg.nix
             ];
 
   # Security
