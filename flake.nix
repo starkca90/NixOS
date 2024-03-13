@@ -1,7 +1,7 @@
 {
   description = "Flake of LibrePhoenix";
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-stable, home-manager, nix-doom-emacs, nix-straight,
+  outputs = inputs@{ self, nixpkgs, nixpkgs-stable, home-manager, disko, nix-doom-emacs, nix-straight,
               stylix, blocklist-hosts, rust-overlay, hyprland-plugins,
               eaf, eaf-browser, org-nursery, org-yaap,
               org-side-tree, org-timeblock, phscroll, ... }:
@@ -149,6 +149,9 @@
 
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     nix-doom-emacs.inputs.nixpkgs.follows = "nixpkgs";
